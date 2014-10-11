@@ -1,5 +1,10 @@
 {% extends "base.html" %}
-{% block title %}home.html{% endblock %}
+{% load staticfiles %}
+{% block head %}home.html{% endblock %}
+{% block frontpage %}
+{% endblock %} 
 {% block content %}
-  <a href='/projects/'>Create my custom project</a>
+  <a href='/lang/'><h1>Create My Custom Project</h1></a>
 {% endblock %}
+
+
