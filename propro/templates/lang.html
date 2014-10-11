@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block head %}home.html{% endblock %}
+{% block frontpage %}
+{% endblock %} 
+{% block title %}
+<h1>Select Language</h1>
+{% endblock %} 
+{% block content %}
+<a href="/rubyver/" title="ruby"><img alt="image" src="{% static "ruby_lang.png" %}"><p></p></a>
+<a href="/pyver/" title="python"><img alt="image" src="{% static "python_lang.png" %}"><p></p></a>
+{% endblock %}
+
