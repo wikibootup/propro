@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block head %}home.html{% endblock %}
+{% block frontpage %}
+{% endblock %} 
+{% block title %}
+<h1>Select Language & Version</h1>
+{% endblock %} 
+  {% block content %}
+    <form  method="POST">{% csrf_token %}
+      {{ form.as_table }}
+      <input type="submit" value="Select" >
+    </form>
+  {% endblock %}
+
