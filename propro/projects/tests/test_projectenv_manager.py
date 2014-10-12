@@ -38,5 +38,15 @@ class TestUserManager(TestCase):
             pass
         else:
             self.fail("Check the unique code of the project")
+ 
+    def test_get_project_name_of_project_env_created_project_env_page(self):
+        project_env = ProjectEnv.objects.create_project_env(
+                self.valid_team_name,
+                self.valid_project_name,
+                self.valid_properties,
+                )
+        try:
+            ProjectEnv.objects.get_project_name(self.valid_project_name)
+        except:
+            ObjectDoesNotExist("Check the get_project_name()")
 
-      
