@@ -1,8 +1,8 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
-from propro.views import Home, Lang
-from projects.views import PyVerView
+from propro.views import Home
+from projects.views import ProjectEnvView
 
 from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
@@ -10,8 +10,7 @@ from django.conf.urls.static import static
 
 urlpatterns = patterns('',
     url(r'^$', Home.as_view(), name='home'), 
-    url(r'^lang/', Lang.as_view(), name='lang'),
-    url(r'^pyver/', PyVerView.as_view(), name='pyver')
+    url(r'^project_env/', ProjectEnvView.as_view(), name='project_env'),
 )
 
 # for development
