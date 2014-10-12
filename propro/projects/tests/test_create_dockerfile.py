@@ -41,3 +41,13 @@ class CreateDockerfileTest(TestCase):
         except:
             self.fail("file open failed")
 
+    def test_post_project_env_page_with_valid_information_should_return_200(self):
+        response = self.client.post("/project_env/", {
+            "team_name" : self.valid_team_name,
+            "project_name" : self.valid_project_name,
+            "lang" : self.valid_lang,
+            "ver" : self.valid_ver,
+            })
+        self.assertEqual(response.status_code, 200)
+
+
