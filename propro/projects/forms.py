@@ -6,9 +6,37 @@ map_pyver = (
     ('3.4.2', 'Python 3.4.2'),
 )
 
-class PyVerForm(forms.Form):
-    select_pyver = forms.ChoiceField(
-        required=True,
-        choices = map_pyver,
-        label=""
-    )
+map_rubyver = (
+    ('1', 'Ruby dummy 1'),
+    ('2', 'Ruby dummy 2'),
+)
+
+class ProjectEnvForm(forms.Form):
+
+    team_name = forms.CharField(
+            max_length = 20,
+            required=True,
+            label="Team Name",
+            )
+
+    project_name = forms.CharField(
+            max_length = 20,
+            required=True,
+            label="Project Name",
+            )
+
+    lang = forms.CharField(
+            max_length = 20,
+            required=True,
+            label="Language"
+            )
+
+    ver = forms.CharField(
+            max_length = 20,
+            required=True,
+            label="Language Version"
+            )
+
+
+   
+
