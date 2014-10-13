@@ -13,7 +13,7 @@ RUN apt-get install -y make libssl-dev zlib1g-dev libbz2-dev \
 libreadline-dev libsqlite3-dev wget llvm
 
 # Python version set
-RUN /bin/mkdir -p /downloads/python_pkgs/ && cd /downloads/python_pkgs/
+RUN /bin/mkdir -p /downloads/python_pkgs/
 RUN /usr/bin/wget -P /downloads/python_pkgs/ https://www.python.org/ftp/python/<x.y.z>/Python-<x.y.z>.tgz
 RUN /bin/tar -zxf /downloads/python_pkgs/Python-<x.y.z>.tgz -C /downloads/python_pkgs/
 RUN cd /downloads/python_pkgs/Python-<x.y.z>/ && /bin/sh configure
